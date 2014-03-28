@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>de.metalcon</groupId>
+    <artifactId>pom</artifactId>
+    <version>0.0.1</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>music-streaming-server-api</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+
+  <name>MusicStremingServerAPI</name>
+  <description>ZeroMQ API for the metalcon music streaming server</description>
+  <url>https://github.com/Metalcon/musicstreamingserver</url>
+
+  <repositories>
+    <!-- Metalcon repository to resolve dependencies from -->
+    <repository>
+      <id>metalcon-depend</id>
+      <url>http://develop.metalcon.de:8080/mvn/</url>
+    </repository>
+  </repositories>
+
+  <properties>
+    <!-- version of testing framework JUnit -->
+    <junit.version>4.9</junit.version>
+
+    <!-- version of JSON -->
+    <json.version>1.1</json.version>
+    
+    
+    <!-- version of testing helper collection -->
+    <metalcon.testing.version>0.0.1</metalcon.testing.version>
+
+    <!-- version of Metalcon domain -->
+    <metalcon.muid.version>0.2.0-SNAPSHOT</metalcon.muid.version>
+    <!-- version of Metalcon API -->
+    <metalcon.api.version>0.1.0</metalcon.api.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>${json.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>de.metalcon</groupId>
+      <artifactId>muid</artifactId>
+      <version>${muid.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1</version>
+    </dependency>
+        <dependency>
+      <groupId>de.metalcon</groupId>
+      <artifactId>api</artifactId>
+      <version>${metalcon.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>de.metalcon</groupId>
+      <artifactId>muid</artifactId>
+      <version>${metalcon.muid.version}</version>
+    </dependency>
+  </dependencies>
+</project>
