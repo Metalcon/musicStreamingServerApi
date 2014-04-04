@@ -8,7 +8,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <artifactId>music-streaming-server-api</artifactId>
-  <version>0.0.1</version>
+  <version>0.1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>MusicStremingServerAPI</name>
@@ -73,5 +73,12 @@
       <artifactId>muid</artifactId>
       <version>${metalcon.muid.version}</version>
     </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+    
+    
   </dependencies>
 </project>

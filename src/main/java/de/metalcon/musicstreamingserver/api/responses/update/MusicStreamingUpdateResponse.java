@@ -1,8 +1,8 @@
-package de.metalcon.musicstreamingserver.api.responses;
+package de.metalcon.musicstreamingserver.api.responses.update;
 
-import de.metalcon.api.responses.SuccessResponse;
+import de.metalcon.musicstreamingserver.api.responses.MusicStreamingResponse;
 
-public class MusicStreamingCreateResponse extends SuccessResponse {
+public class MusicStreamingUpdateResponse extends MusicStreamingResponse {
 
     /**
      * 
@@ -20,7 +20,7 @@ public class MusicStreamingCreateResponse extends SuccessResponse {
      * @param responseString
      *            containing status messages about the create request
      */
-    public MusicStreamingCreateResponse(
+    public MusicStreamingUpdateResponse(
             String responseString) {
         super();
         this.responseString = responseString;

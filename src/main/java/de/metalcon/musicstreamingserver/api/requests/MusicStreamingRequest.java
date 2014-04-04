@@ -10,6 +10,10 @@ import de.metalcon.api.requests.Request;
  */
 public abstract class MusicStreamingRequest extends Request {
 
+    public MusicStreamingRequest() {
+        super();
+    }
+
     /**
      * 
      */

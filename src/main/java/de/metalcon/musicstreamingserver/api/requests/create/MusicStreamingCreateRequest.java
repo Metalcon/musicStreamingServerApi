@@ -1,22 +1,23 @@
-package de.metalcon.musicstreamingserver.api.requests.registration;
+package de.metalcon.musicstreamingserver.api.requests.create;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.io.Serializable;
 
 import de.metalcon.domain.Muid;
+import de.metalcon.musicstreamingserver.api.requests.MusicStreamingRequest;
 
 /**
+ * request: Store a new mp3 file in the music streaming server
  * 
  * @author rpickhardt
  * 
  */
-public class CreateRequestData implements Serializable {
+public class MusicStreamingCreateRequest extends MusicStreamingRequest {
 
     /**
      * 
      */
-    private static final long serialVersionUID = 47885665781764036L;
+    private static final long serialVersionUID = -8681544303758185318L;
 
     String serializedMuid;
 
@@ -61,8 +62,8 @@ public class CreateRequestData implements Serializable {
      * @param metaData
      *            String containing metadata to be stored in the server. The
      *            metadata should be given as a json string
-     */
-    public CreateRequestData(
+     * **/
+    public MusicStreamingCreateRequest(
             Muid muid,
             byte[] musicFile,
             String metaData) {
