@@ -1,6 +1,8 @@
 package de.metalcon.musicstreamingserver.api.responses.read;
 
-import de.metalcon.musicstreamingserver.api.MusicData;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import de.metalcon.musicstreamingserver.api.responses.MusicStreamingResponse;
 
 public class MusicStreamingReadMusicItemMetaDataResponse extends
@@ -11,25 +13,19 @@ public class MusicStreamingReadMusicItemMetaDataResponse extends
      */
     private static final long serialVersionUID = -5950670164507940683L;
 
-    protected MusicData musicData;
+    protected String[] metaDataList;
 
     /**
      * Status message
      */
     protected String responseString;
 
-    /**
-     * create
-     * 
-     * @param responseString
-     *            containing status messages about the create request
-     */
     public MusicStreamingReadMusicItemMetaDataResponse(
             String responseString,
-            MusicData musicData) {
+            String[] musicMetaDatalist) {
         super();
         this.responseString = responseString;
-        this.musicData = musicData;
+        metaDataList = musicMetaDatalist;
     }
 
     /**
@@ -39,8 +35,7 @@ public class MusicStreamingReadMusicItemMetaDataResponse extends
         return responseString;
     }
 
-    public String getMetaData() {
-        return musicData.getMetaData();
+    public ArrayList<String> getMetaDataList() {
+        return new ArrayList<String>(Arrays.asList(metaDataList));
     }
-
 }
